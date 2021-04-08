@@ -1,0 +1,90 @@
+{
+  "collection": {
+    "item": [],
+    "event": [],
+    "variable": [],
+    "info": {
+      "_postman_id": "ef861206-6f65-4a6d-a6fb-b3d716736edd",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    }
+  },
+  "environment": {
+    "id": "839d150c-ccd0-43a3-a494-e188bc8f6ee2",
+    "values": []
+  },
+  "globals": {
+    "id": "f6790f2b-3105-4e21-be51-4b78c1ac9079",
+    "values": []
+  },
+  "run": {
+    "stats": {
+      "iterations": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      },
+      "items": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      },
+      "scripts": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      },
+      "prerequests": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      },
+      "requests": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      },
+      "tests": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      },
+      "assertions": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      },
+      "testScripts": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      },
+      "prerequestScripts": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      }
+    },
+    "timings": {
+      "responseAverage": 0,
+      "responseMin": 0,
+      "responseMax": 0,
+      "responseSd": 0,
+      "dnsAverage": 0,
+      "dnsMin": 0,
+      "dnsMax": 0,
+      "dnsSd": 0,
+      "firstByteAverage": 0,
+      "firstByteMin": 0,
+      "firstByteMax": 0,
+      "firstByteSd": 0,
+      "started": 1617212560812,
+      "completed": 1617212560814
+    },
+    "executions": [],
+    "transfers": {
+      "responseTotal": 0
+    },
+    "failures": [],
+    "error": null
+  }
+}
