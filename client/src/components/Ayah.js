@@ -6,7 +6,6 @@ import { names } from "../names"
 import { Link } from "react-router-dom"
 const useStyles = makeStyles((theme) => ({
   root: {
-    direction: "rtl",
    backgroundColor: "#F0EFF4",
     minHeight: "100vh",
     padding: theme.spacing(1),

@@ -5,8 +5,11 @@ import { deepOrange, blueGrey } from '@material-ui/core/colors'
 const headerFont = 'Poppins'
 
 const theme = createMuiTheme({
+    direction: "rtl",
     palette: {
-        primary: deepOrange,
+        primary: {
+            main: '#3D2645',
+        },
         secondary: blueGrey
     },
     props: {

@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme)=>({
   root: {
     flexGrow:1,
-    direction:"rtl",
     maxWidth:"100%",
     paddingTop: theme.spacing(3),
     justifyContent:"center",
