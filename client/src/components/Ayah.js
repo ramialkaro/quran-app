@@ -15,7 +15,6 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexWrap: "wrap",
     padding: theme.spacing(2),
-    margin: theme.spacing(1),
     height: theme.spacing(16),
     color: "#3D2645",
     alignItems: "center",
