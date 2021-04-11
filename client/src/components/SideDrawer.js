@@ -21,9 +21,11 @@ import MenuBookIcon from "@material-ui/icons/MenuBook";
 import GraphicEqIcon from "@material-ui/icons/GraphicEq";
 import InfoIcon from "@material-ui/icons/Info";
 import { SuraNames } from "./SuraNames";
-import { Link } from "react-router-dom";
-import NoteIcon from '@material-ui/icons/Note';
-
+import { Link, Route, Switch } from "react-router-dom";
+import NoteIcon from "@material-ui/icons/Note";
+import { HadithPage } from "../views/HadithPage";
+import { Ayah } from "./Ayah";
+import { Azkar } from "./Azkar";
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -85,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SideDrawer() {
+export default function SideDrawer(child) {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -128,7 +130,13 @@ export default function SideDrawer() {
         })}
       >
         <div className={classes.drawerHeader} />
-        <SuraNames />
+
+        <Switch>
+          <Route exact path="/" component={SuraNames} />
+          <Route path="/azkar" component={Azkar} />
+          <Route path="/hadith" component={HadithPage} />
+          <Route path="/sura/:id" component={Ayah} />
+        </Switch>
       </main>
       <Drawer
         className={classes.drawer}
@@ -150,36 +158,36 @@ export default function SideDrawer() {
         </div>
         <Divider />
         <List>
-
           <ListItem component={Link} to="/">
             <ListItemIcon>
               <MenuBookIcon color="primary" />
             </ListItemIcon>
             <ListItemText primary={"اقرأ القرآن"} />
           </ListItem>
-
           <ListItem component={Link} to="/listen">
             <ListItemIcon>
               <GraphicEqIcon color="primary" />
             </ListItemIcon>
             <ListItemText primary={"الاستماع"} />
           </ListItem>
-          
           <ListItem component={Link} to="/azkar">
             <ListItemIcon>
               <NoteIcon color="primary" />
-
             </ListItemIcon>
             <ListItemText primary={"azkar"} />
+          </ListItem>{" "}
+          <ListItem component={Link} to="/hadith">
+            <ListItemIcon>
+              <NoteIcon color="primary" />
+            </ListItemIcon>
+            <ListItemText primary={"Hadith"} />
           </ListItem>
-          
           <ListItem>
             <ListItemIcon>
               <InfoIcon color="primary" />
             </ListItemIcon>
             <ListItemText primary={"معلومات عنا"} />
           </ListItem>
-        
         </List>
         <Divider />
       </Drawer>
