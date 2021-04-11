@@ -11,6 +11,9 @@ const useStyles = makeStyles((theme)=>({
     paddingTop: theme.spacing(3),
     justifyContent:"center",
   },
+  grid:{
+    textDecoration: "none",
+  },
   paper: {
     padding:theme.spacing(5),
     textAlign:"center",
@@ -28,7 +31,7 @@ export const SuraNames = () =>{
       {
         names.map ((name, index) => {
           return (
-            <Grid component={Link} to={`/sura/${index+1}`} key={index} item>
+            <Grid component={Link} to={`/sura/${index+1}`} key={index} className={classes.grid} item>
               <Paper  className={classes.paper}>
                 {name}
               </Paper>
