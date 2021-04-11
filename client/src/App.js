@@ -1,7 +1,6 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { Ayah } from "./components/Ayah";
-import { SuraNames } from "./components/SuraNames";
+import { Azkar } from "./components/Azkar";
 import { ThemeProvider } from "@material-ui/core";
 import theme from "./theme";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -18,6 +17,7 @@ function App() {
         <Router>
           <Switch>
             <Route exact path="/" component={SideDrawer} />
+            <Route path="/azkar" component={Azkar} />
             <Route path="/sura/:id" component={Ayah} />
           </Switch>
         </Router>

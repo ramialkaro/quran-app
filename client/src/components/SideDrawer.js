@@ -1,16 +1,28 @@
 import React from "react";
 import clsx from "clsx";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import {Drawer, AppBar, Toolbar, CssBaseline, ListItem, List, ListItemText, ListItemIcon, Typography, Divider} from "@material-ui/core";
+import {
+  Drawer,
+  AppBar,
+  Toolbar,
+  CssBaseline,
+  ListItem,
+  List,
+  ListItemText,
+  ListItemIcon,
+  Typography,
+  Divider,
+} from "@material-ui/core";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import MenuBookIcon from "@material-ui/icons/MenuBook";
-import GraphicEqIcon from '@material-ui/icons/GraphicEq';
-import InfoIcon from '@material-ui/icons/Info';
+import GraphicEqIcon from "@material-ui/icons/GraphicEq";
+import InfoIcon from "@material-ui/icons/Info";
 import { SuraNames } from "./SuraNames";
 import { Link } from "react-router-dom";
+import NoteIcon from '@material-ui/icons/Note';
 
 const drawerWidth = 240;
 
@@ -97,7 +109,7 @@ export default function SideDrawer() {
       >
         <Toolbar>
           <Typography variant="h6" noWrap className={classes.title}>
-            {<MenuBookIcon style={{ margin: "0 6pt" }} />}القرآن الكريم 
+            {<MenuBookIcon style={{ margin: "0 6pt" }} />}القرآن الكريم
           </Typography>
           <IconButton
             color="inherit"
@@ -116,7 +128,7 @@ export default function SideDrawer() {
         })}
       >
         <div className={classes.drawerHeader} />
-      <SuraNames />
+        <SuraNames />
       </main>
       <Drawer
         className={classes.drawer}
@@ -138,24 +150,36 @@ export default function SideDrawer() {
         </div>
         <Divider />
         <List>
+
           <ListItem component={Link} to="/">
             <ListItemIcon>
-                <MenuBookIcon color="primary"/>
+              <MenuBookIcon color="primary" />
             </ListItemIcon>
-            <ListItemText  primary={"اقرأ القرآن"} />
+            <ListItemText primary={"اقرأ القرآن"} />
           </ListItem>
-          <ListItem component={Link} to="listen">
+
+          <ListItem component={Link} to="/listen">
             <ListItemIcon>
-                <GraphicEqIcon color="primary"/>
+              <GraphicEqIcon color="primary" />
             </ListItemIcon>
-            <ListItemText  primary={"الاستماع"} />
+            <ListItemText primary={"الاستماع"} />
           </ListItem>
-          <ListItem >
+          
+          <ListItem component={Link} to="/azkar">
             <ListItemIcon>
-              <InfoIcon color="primary"/>
+              <NoteIcon color="primary" />
+
+            </ListItemIcon>
+            <ListItemText primary={"azkar"} />
+          </ListItem>
+          
+          <ListItem>
+            <ListItemIcon>
+              <InfoIcon color="primary" />
             </ListItemIcon>
             <ListItemText primary={"معلومات عنا"} />
           </ListItem>
+        
         </List>
         <Divider />
       </Drawer>
