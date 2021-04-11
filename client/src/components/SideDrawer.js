@@ -19,6 +19,7 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import MenuBookIcon from "@material-ui/icons/MenuBook";
 import GraphicEqIcon from "@material-ui/icons/GraphicEq";
+import ChromeReaderModeIcon from "@material-ui/icons/ChromeReaderMode";
 import InfoIcon from "@material-ui/icons/Info";
 import { SuraNames } from "./SuraNames";
 import { Link, Route, Switch } from "react-router-dom";
@@ -26,6 +27,7 @@ import NoteIcon from "@material-ui/icons/Note";
 import { HadithPage } from "../views/HadithPage";
 import { Ayah } from "./Ayah";
 import { Azkar } from "./Azkar";
+import { HadithDescription } from "./HadithDescription";
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -134,7 +136,8 @@ export default function SideDrawer(child) {
         <Switch>
           <Route exact path="/" component={SuraNames} />
           <Route path="/azkar" component={Azkar} />
-          <Route path="/hadith" component={HadithPage} />
+          <Route exact path="/hadith" component={HadithPage} />
+          <Route path="/hadith/:id" component={HadithDescription} />
           <Route path="/sura/:id" component={Ayah} />
         </Switch>
       </main>
@@ -174,13 +177,13 @@ export default function SideDrawer(child) {
             <ListItemIcon>
               <NoteIcon color="primary" />
             </ListItemIcon>
-            <ListItemText primary={"azkar"} />
+            <ListItemText primary={"أذكار"} />
           </ListItem>{" "}
           <ListItem component={Link} to="/hadith">
             <ListItemIcon>
-              <NoteIcon color="primary" />
+              <ChromeReaderModeIcon color="primary" />
             </ListItemIcon>
-            <ListItemText primary={"Hadith"} />
+            <ListItemText primary={"الحديث الشريف"} />
           </ListItem>
           <ListItem>
             <ListItemIcon>
