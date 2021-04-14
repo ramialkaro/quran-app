@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Container, Divider, Paper, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { apiFetch } from "../fetchData.js";
 import { names } from "../names";
 import { Link } from "react-router-dom";
+import AyahSrc from '../data/Ayah.svg'
+
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: "#F0EFF4",
@@ -58,7 +59,6 @@ export const Ayah = ({ match }) => {
         </Grid>
         <Grid item container xs={11} justify="center">
           {names[id - 1]}
-          <span>{sura.count}</span>
         </Grid>
       </Grid>
       {sura &&
@@ -66,7 +66,7 @@ export const Ayah = ({ match }) => {
           return (
             <Paper elevation={0} className={classes.ayah}>
               {verse}
-              <img src="Ayah.svg" alt="" width={50} height={50} />
+              <img src={AyahSrc} alt="" width={50} height={50} />
             </Paper>
           );
         })}

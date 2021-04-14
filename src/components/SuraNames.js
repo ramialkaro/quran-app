@@ -18,6 +18,8 @@ const useStyles = makeStyles((theme)=>({
     padding:theme.spacing(5),
     textAlign:"center",
     width: 200,
+    fontWeight: "200",
+    fontSize:'16pt',
     backgroundColor: "#F0EFF4",
   }
 }));
@@ -32,7 +34,7 @@ export const SuraNames = () =>{
         names.map ((name, index) => {
           return (
             <Grid component={Link} to={`/sura/${index+1}`} key={index} className={classes.grid} item>
-              <Paper  className={classes.paper}>
+              <Paper className={classes.paper}>
                 {name}
               </Paper>
             </Grid>

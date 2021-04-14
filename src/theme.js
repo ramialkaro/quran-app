@@ -10,7 +10,9 @@ const theme = createMuiTheme({
         primary: {
             main: '#3D2645',
         },
-        secondary: blueGrey
+        secondary: {
+            main: '#EDDFEF'
+        }
     },
     props: {
         MuiButton: {

@@ -12,7 +12,7 @@ const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
 function App() {
   return (
     <StylesProvider jss={jss}>
-      <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
         <Router>
           <SideDrawer />
         </Router>
