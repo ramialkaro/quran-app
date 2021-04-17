@@ -25,9 +25,10 @@ import { SuraNames } from "./SuraNames";
 import { Link, Route, Switch } from "react-router-dom";
 import NoteIcon from "@material-ui/icons/Note";
 import { HadithPage } from "../views/HadithPage";
-import { Ayah } from "./Ayah";
-import { Azkar } from "./Azkar";
+import { AzkarPage } from "../views/AzkarPage";
+import { ListenPage } from "../views/ListenPage";
 import { HadithDescription } from "./HadithDescription";
+import { Ayah } from "./Ayah";
 import * as momentH from "moment-hijri"
 
 const drawerWidth = 240;
@@ -141,7 +142,8 @@ export default function SideDrawer(child) {
 
         <Switch>
           <Route exact path="/" component={SuraNames} />
-          <Route path="/azkar" component={Azkar} />
+          <Route path="/azkar" component={AzkarPage} />
+          <Route path="/listen" component={ListenPage} />
           <Route exact path="/hadith" component={HadithPage} />
           <Route path="/hadith/:id" component={HadithDescription} />
           <Route path="/sura/:id" component={Ayah} />
