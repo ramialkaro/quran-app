@@ -28,6 +28,8 @@ import { HadithPage } from "../views/HadithPage";
 import { Ayah } from "./Ayah";
 import { Azkar } from "./Azkar";
 import { HadithDescription } from "./HadithDescription";
+import * as momentH from "moment-hijri"
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -101,7 +103,8 @@ export default function SideDrawer(child) {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-
+  
+  let nn = momentH(new  Date(Date.now())).format("iD iMMMM iYYYY")
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -114,6 +117,9 @@ export default function SideDrawer(child) {
         <Toolbar>
           <Typography variant="h6" noWrap className={classes.title}>
             {<MenuBookIcon style={{ margin: "0 6pt" }} />}القرآن الكريم
+          </Typography>
+          <Typography variant="h6">
+            {nn}
           </Typography>
           <IconButton
             color="inherit"
