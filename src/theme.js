@@ -1,6 +1,5 @@
 
 import { createMuiTheme } from '@material-ui/core/styles'
-import { deepOrange, blueGrey } from '@material-ui/core/colors'
 
 const headerFont = 'Poppins'
 
